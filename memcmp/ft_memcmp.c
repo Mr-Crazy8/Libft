@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anel-men <anel-men@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 13:39:55 by anel-men          #+#    #+#             */
-/*   Updated: 2024/10/22 13:55:41 by anel-men         ###   ########.fr       */
+/*   Created: 2024/10/23 18:11:56 by anel-men          #+#    #+#             */
+/*   Updated: 2024/10/23 18:54:03 by anel-men         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int ft_strlen(char *str)
-{
-    unsigned int i;
-    
-    i = 0;
-    while (str[i] != '\0')
-    {
-        i++;
-    }
-    return (i)
-}
-size_t ft_strlcpy(char *dst, const char *src, size_t size)
+int memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t i;
-    size_t src_len;
+	const unsigned char *p1 = (const unsigned char *)s1;
+	const unsigned char *p2 = (const unsigned char *)s2;
 
-	i = 0;
-    src_len = ft_strlen(src);
-	if (size == 0)
+	size_t i = 0;
+
+	while (i < n)
 	{
-		return (src_len);
-	}
-	while (i < size - 1 && src != '\0')
-	{
-		dst[i] = src[i];
+		if (p1[i] < p2[i])
+		{
+			return -1;
+		}
+		else if (p1[i] > p2[i])
+		{
+			return 1;
+		}
 		i++;
 	}
-	dst[i] = '\0';
-	return (src_len);
+	return 0;
 }

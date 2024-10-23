@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isdigit.c                                          :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anel-men <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anel-men <anel-men@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 11:56:19 by anel-men          #+#    #+#             */
-/*   Updated: 2024/10/22 12:05:25 by anel-men         ###   ########.fr       */
+/*   Created: 2024/10/23 19:54:42 by anel-men          #+#    #+#             */
+/*   Updated: 2024/10/23 19:54:46 by anel-men         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdio.h>
-#include <ctype.h>
-
-int ft_isdigit(int c)
+#include <string.h>
+void	ft_bzero(void *s, size_t n)
 {
-	if (c >= '0' && c <= '9')
+	size_t i = 0;
+	unsigned char *ptr = (unsigned char *)s;
+
+	while(n--)
 	{
-		return (1);
+		ptr[i] = '0';
+		i++;
 	}
-	else
-		return (0);
 }
+
 int main()
 {
+	char buffer[10] = "anass";
+	ft_bzero(buffer, 5);
+	printf("%s\n", buffer);
 
-	int r0 = ft_isdigit(c);
-	int r1 = isdigit(c);
-
-	printf("%d.\n", r0);
-	printf("%d.\n", r1);
 }
