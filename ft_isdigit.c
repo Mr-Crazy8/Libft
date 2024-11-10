@@ -6,13 +6,11 @@
 /*   By: anel-men <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:56:19 by anel-men          #+#    #+#             */
-/*   Updated: 2024/11/05 17:44:26 by anel-men         ###   ########.fr       */
+/*   Updated: 2024/11/08 09:41:18 by anel-men         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
@@ -23,3 +21,9 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
+
+// int main()
+// {
+	
+// 	printf("%d\n", ft_isdigit('9'));
+// }

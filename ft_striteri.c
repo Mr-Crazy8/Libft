@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
+#include "libft.h"
 
 //void ex_func(unsigned int index, char *c)
 //{
@@ -18,17 +19,17 @@
 //		*c -= 32;
 	//}
 //}
-size_t ft_strlen(const char *s)
-{
-	size_t i;
+// static size_t ft_strlen(const char *s)
+// {
+// 	size_t i;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return i;
-}
+// 	i = 0;
+// 	while (s[i] != '\0')
+// 	{
+// 		i++;
+// 	}
+// 	return i;
+// }
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	if (s == NULL || f == NULL)

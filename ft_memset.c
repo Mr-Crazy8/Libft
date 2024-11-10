@@ -6,43 +6,37 @@
 /*   By: anel-men <anel-men@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:59:50 by anel-men          #+#    #+#             */
-/*   Updated: 2024/10/23 19:22:47 by anel-men         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:14:35 by anel-men         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
-#include <string.h>
-
-
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t i = 0;
-	unsigned char *ptr = (unsigned char *)s;
-    while(n--)
+	size_t			i;
+	unsigned char	*ptr;
+
+	i = 0;
+	ptr = (unsigned char *)s;
+	while (n--)
 	{
 		ptr[i] = (unsigned char)c;
 		i++;
 	}
-
-	return s;
-
+	return (s);
 }
 
+// int main()
+// {
+// 	int r = 100;
 
-//int main()
-//{
-//	int a;
-//	ft_memset(&a, 255, 4);
-//	ft_memset(&a, 250, 2);
-//	ft_memset(&a, 199, 1);
-//	printf("%d\n", a);
-//}
+// 	int g = 97;
+// 	char p;
 
+//     //01100001
+// 	ft_memset(&r, 0, 4);
+// 	p = *(char *)ft_memset(&r, 97, 1);
+// 	printf("%c\n", p);
+// }
 
-// 00000000 00000000 00000000 00000000
-
-// 00000000 00000000 00000101 00000101
-
-// 00000000 00000000 00000101 00111001
-
-// 11111111 11111111 11111010 11000111

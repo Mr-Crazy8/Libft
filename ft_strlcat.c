@@ -6,24 +6,27 @@
 /*   By: anel-men <anel-men@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 17:41:07 by anel-men          #+#    #+#             */
-/*   Updated: 2024/10/29 14:37:01 by anel-men         ###   ########.fr       */
+/*   Updated: 2024/11/07 10:36:10 by anel-men         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <limits.h>
+#include "libft.h"
 
-size_t ft_strlen(const char *str)
-{
-	size_t i;
+// static size_t ft_strlen(const char *str)
+// {
+// 	size_t i;
 
-	i = 0;
-	while(str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
+// 	i = 0;
+// 	while(str[i] != '\0')
+// 	{
+// 		i++;
+// 	}
+// 	return (i);
+// }
 size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t i_dst;
@@ -31,8 +34,10 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 	size_t i;
 	size_t j;
 
-	i_dst = ft_strlen(dst);
-	i_src = ft_strlen(src);
+    i_src = ft_strlen(src);
+    if (dst == NULL && src != NULL && size == 0)
+        return (i_src);
+    i_dst = ft_strlen(dst);
 	i = i_dst;
 	j = 0;
 	if (size <= i)
@@ -48,15 +53,7 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 
 }
 
-//int main() {
- //   char dst[] = "Hello";
- //   const char *src = ", world!";
-//
-// size_t len = ft_strlcat(dst, src, 3);
-//
-//    printf("Destination string: %s\n", dst);
-//    printf("Total length of the concatenated string: %zu\n", len);
-//
-//    return 0;
-//}
-
+// int main()
+// {
+//     printf("%zu", strlcat(NULL, "anas", 0));
+// }

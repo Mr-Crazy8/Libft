@@ -11,20 +11,21 @@
 /* ************************************************************************** */
 #include <stdio.h>
 #include <stdlib.h>
+#include "libft.h"
 
-char    *ft_strcpy(char *dest, char *src)
-{
-    int    i;
-
-    i = 0;
-    while (src[i] != '\0')
-    {
-        dest[i] = src[i];
-        i++;
-    }
-    dest[i] = '\0';
-    return (dest);
-}
+//static char    *ft_strcpy(char *dest, char *src)
+//{
+ //   int    i;
+//
+  //  i = 0;
+ //   while (src[i] != '\0')
+ //   {
+  //      dest[i] = src[i];
+  //      i++;
+  //  }
+  //  dest[i] = '\0';
+   // return (dest);
+//}
 /*char    *ft_itoa(int nbr)
 {
     int        is_negative;
@@ -90,38 +91,38 @@ char    *ft_strcpy(char *dest, char *src)
     return (str);
 }*/
 
-int    ft_strlen(char *str)
-{
-    int    i;
+//static int    ft_strlen(char *str)
+//{
+//    int    i;
+//
+ //   i = 0;
+ //   while (str[i] != '\0')
+  //  {
+  //      i++;
+ //   }
+  //  return (i);
+//}
 
-    i = 0;
-    while (str[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
-}
-
-char    *ft_strdup(char *src)
-{
-    int        i;
-    int        j;
-    int        src_len;
-    char    *dup;
-
-    i = 0;
-    j = 0;
-    src_len = ft_strlen(src);
-    dup = (char *)malloc(src_len + 1);
-    while (src[i] != '\0')
-    {
-        dup[j] = src[i];
-        j++;
-        i++;
-    }
-    dup[i] = '\0';
-    return (dup);
-}
+//static char    *ft_strdup(char *src)
+//{
+ //   int        i;
+  //  int        j;
+  //  int        src_len;
+   // char    *dup;
+//
+   // i = 0;
+   // j = 0;
+   // src_len = ft_strlen(src);
+   // dup = (char *)malloc(src_len + 1);
+   // while (src[i] != '\0')
+   // {
+   //     dup[j] = src[i];
+    //    j++;
+   //     i++;
+   // }
+   // dup[i] = '\0';
+//return (dup);
+//}
 char *ft_itoa(int nbr) {
     char *str;
     int len = 0, temp = nbr;

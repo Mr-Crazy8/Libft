@@ -6,13 +6,11 @@
 /*   By: anel-men <anel-men@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:42:36 by anel-men          #+#    #+#             */
-/*   Updated: 2024/11/05 17:42:39 by anel-men         ###   ########.fr       */
+/*   Updated: 2024/11/08 10:23:40 by anel-men         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int	ft_isascii(int c)
 {
@@ -23,3 +21,8 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
+
+// int main()
+// {
+// 	printf("%d\n", ft_isascii(500));
+// }

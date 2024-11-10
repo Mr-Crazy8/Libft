@@ -6,13 +6,11 @@
 /*   By: anel-men <anel-men@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:49:27 by anel-men          #+#    #+#             */
-/*   Updated: 2024/11/05 17:50:25 by anel-men         ###   ########.fr       */
+/*   Updated: 2024/11/08 10:31:37 by anel-men         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
@@ -24,3 +22,8 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
+
+// int main()
+// {
+// 	printf("%d\n", ft_isprint('\n'));
+// }

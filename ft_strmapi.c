@@ -13,14 +13,15 @@
 #include <string.h>
 #include <stdio.h>
 #include <assert.h>
+#include "libft.h"
 
-size_t ft_strlen(const char *s) {
-    size_t i = 0;
-    while (s[i] != '\0') {
-        i++;
-    }
-    return i;
-}
+// static size_t ft_strlen(const char *s) {
+//     size_t i = 0;
+//     while (s[i] != '\0') {
+//         i++;
+//     }
+//     return i;
+// }
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char)) {
     if (s == NULL || f == NULL) {
