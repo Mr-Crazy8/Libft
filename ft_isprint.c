@@ -6,7 +6,7 @@
 /*   By: anel-men <anel-men@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:49:27 by anel-men          #+#    #+#             */
-/*   Updated: 2024/11/08 10:31:37 by anel-men         ###   ########.fr       */
+/*   Updated: 2024/11/12 10:40:33 by anel-men         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,3 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-
-// int main()
-// {
-// 	printf("%d\n", ft_isprint('\n'));
-// }

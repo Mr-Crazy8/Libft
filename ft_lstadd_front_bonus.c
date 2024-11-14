@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anel-men <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anel-men <anel-men@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 12:40:23 by anel-men          #+#    #+#             */
-/*   Updated: 2024/11/12 12:42:15 by anel-men         ###   ########.fr       */
+/*   Created: 2024/11/01 09:51:10 by anel-men          #+#    #+#             */
+/*   Updated: 2024/11/13 09:36:22 by anel-men         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_tolower(int c)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (c >= 'A' && c <= 'Z')
-	{
-		return (c + 32);
-	}
-	return (c);
+	if (new == NULL)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }

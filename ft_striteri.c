@@ -10,36 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
+#include <assert.h>
 #include "libft.h"
 
-//void ex_func(unsigned int index, char *c)
-//{
-//	if (*c >= 'a' && *c <= 'z')
-//	{
-//		*c -= 32;
-	//}
-//}
-// static size_t ft_strlen(const char *s)
-// {
-// 	size_t i;
-
-// 	i = 0;
-// 	while (s[i] != '\0')
-// 	{
-// 		i++;
-// 	}
-// 	return i;
-// }
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
+	size_t	len;
+	size_t	i;
+
 	if (s == NULL || f == NULL)
 	{
-		return;
-
+		return ;
 	}
-
-	size_t len = ft_strlen(s);
-	size_t i;
+	len = ft_strlen(s);
 	i = 0;
 	while (i < len)
 	{
@@ -47,11 +30,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-//int main()
-//{
-//	char str[] = "hello world";
-//	ft_striteri(str, ex_func);
-//	printf("%s\n", str);
-//	return 0;
-//}

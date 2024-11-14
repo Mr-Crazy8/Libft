@@ -9,19 +9,13 @@
 /*   Updated: 2024/10/26 10:53:16 by anel-men         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
-#include <string.h>
-#include <stddef.h>
-#include <stdio.h>
 #include "libft.h"
-
 
 static int	is_in_set(char c, const char *set)
 {
 	int	i;
 
 	i = 0;
-
 	while (set[i] != '\0')
 	{
 		if (set[i] == c)

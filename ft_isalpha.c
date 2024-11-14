@@ -6,7 +6,7 @@
 /*   By: anel-men <anel-men@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:35:44 by anel-men          #+#    #+#             */
-/*   Updated: 2024/11/08 09:31:43 by anel-men         ###   ########.fr       */
+/*   Updated: 2024/11/12 10:35:29 by anel-men         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
-
-// int main()
-// {
-// 	char c = '0';
-// 	printf("%d\n", ft_isalpha(c));
-// }

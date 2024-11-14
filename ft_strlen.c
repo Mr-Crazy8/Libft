@@ -6,7 +6,7 @@
 /*   By: anel-men <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 09:34:54 by anel-men          #+#    #+#             */
-/*   Updated: 2024/11/08 10:35:51 by anel-men         ###   ########.fr       */
+/*   Updated: 2024/11/12 10:41:38 by anel-men         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,3 @@ int	ft_strlen(char const *str)
 	}
 	return (i);
 }
-
-
-//int main()
-//{
-//	char str[] = "Hello, World!";
-//	printf("%d\n", ft_strlen(str));
-//}

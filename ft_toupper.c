@@ -1,23 +1,21 @@
-#include <unistd.h>
-#include <stdio.h>
-#include <ctype.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anel-men <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/12 12:38:04 by anel-men          #+#    #+#             */
+/*   Updated: 2024/11/12 12:39:14 by anel-men         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{
-		return c - 32;
+		return (c - 32);
 	}
-	return c;
+	return (c);
 }
-
-//int main()
-//{
-//	char c = 'E';
-//	char r0 = ft_toupper(c);
-//	char r1 = toupper(c);
-
-//	printf("%c. \n", r0);
-//	printf("%c. \n", r1);
-//}

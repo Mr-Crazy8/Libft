@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anel-men <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anel-men <anel-men@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 12:40:23 by anel-men          #+#    #+#             */
-/*   Updated: 2024/11/12 12:42:15 by anel-men         ###   ########.fr       */
+/*   Created: 2024/11/01 09:30:03 by anel-men          #+#    #+#             */
+/*   Updated: 2024/11/01 09:44:51 by anel-men         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdlib.h>
 #include "libft.h"
 
-int	ft_tolower(int c)
+t_list	*ft_lstnew(void	*content)
 {
-	if (c >= 'A' && c <= 'Z')
-	{
-		return (c + 32);
-	}
-	return (c);
+	t_list	*node;
+
+	node = (t_list *)malloc(sizeof(t_list));
+	if (node == NULL)
+		return (NULL);
+	node->content = content;
+	node->next = NULL;
+	return (node);
 }
