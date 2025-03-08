@@ -9,10 +9,7 @@
 /*   Updated: 2024/11/11 19:12:33 by anel-men         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-#include <assert.h>
+
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
@@ -22,15 +19,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*result;
 
 	if (s == NULL || f == NULL)
-	{
 		return (NULL);
-	}
 	len = ft_strlen(s);
 	result = malloc(len + 1);
 	if (result == NULL)
-	{
 		return (NULL);
-	}
 	i = 0;
 	while (i < len)
 	{

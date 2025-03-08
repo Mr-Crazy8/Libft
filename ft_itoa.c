@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_len(long c)
+static int	ft_len(long c)
 {
 	int	count;
 

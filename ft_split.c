@@ -56,7 +56,7 @@ static char	**split_string(char const *s, char c, char **split, size_t n)
 		split[j] = (char *)malloc(len + 1);
 		if (!split[j])
 			return (free_split(split, j));
-		memcpy(split[j], &s[start], len);
+		ft_memcpy(split[j], &s[start], len);
 		split[j][len] = '\0';
 		j++;
 	}

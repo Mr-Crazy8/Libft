@@ -9,8 +9,7 @@
 /*   Updated: 2024/10/29 14:53:46 by anel-men         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
-#include <stdio.h>
+
 #include "libft.h"
 
 static char	*ft_strncpy(char *dest, const char *src, unsigned int n)

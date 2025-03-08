@@ -9,7 +9,6 @@
 /*   Updated: 2024/11/01 09:44:51 by anel-men         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
 #include "libft.h"
 
 t_list	*ft_lstnew(void	*content)

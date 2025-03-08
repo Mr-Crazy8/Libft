@@ -11,62 +11,27 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-static void	ft_clear(t_list **lst, void (*del)(void *))
-{
-	t_list	*temp;
-
-	if (lst == NULL || *lst == NULL)
-		return ;
-	while (*lst != NULL)
-	{
-		temp = (*lst)->next;
-		del((*lst)->content);
-		free(*lst);
-		*lst = temp;
-	}
-	*lst = NULL;
-}
-
-static t_list	*ft_create_node(void *content, void (*del)(void *))
-{
-	t_list	*new_node;
-
-	new_node = (t_list *)malloc(sizeof(t_list));
-	if (new_node == NULL)
-		return (NULL);
-	new_node->content = content;
-	if (new_node->content == NULL)
-	{
-		del(new_node->content);
-		free(new_node);
-		return (NULL);
-	}
-	new_node->next = NULL;
-	return (new_node);
-}
-
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_list;
-	t_list	*current;
-	t_list	*new_node;
+	t_list		*new_list;
+	t_list		*new_node;
+	void		*new_content;
 
-	if (lst == NULL || f == NULL)
-		return (NULL);
 	new_list = NULL;
-	while (lst != NULL)
+	new_node = NULL;
+	if (!lst || !f || !del)
+		return (NULL);
+	while (lst)
 	{
-		new_node = ft_create_node(f(lst->content), del);
-		if (new_node == NULL)
+		new_content = f(lst->content);
+		new_node = ft_lstnew(new_content);
+		if (!new_node)
 		{
-			ft_clear(&new_list, del);
+			del(new_content);
+			ft_lstclear(&new_list, del);
 			return (NULL);
 		}
-		if (new_list == NULL)
-			new_list = new_node;
-		else
-			current->next = new_node;
-		current = new_node;
+		ft_lstadd_back(&new_list, new_node);
 		lst = lst->next;
 	}
 	return (new_list);

@@ -9,9 +9,7 @@
 /*   Updated: 2024/11/12 10:26:38 by anel-men         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
@@ -23,16 +21,14 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	i = 0;
 	total_size = nmemb * size;
+	if (nmemb == 0 || size == 0)
+		return (malloc(1));
 	if (nmemb && size
 		&& total_size / nmemb != size)
-	{
 		return (NULL);
-	}
 	ptr = malloc(total_size);
 	if (ptr == NULL)
-	{
 		return (NULL);
-	}
 	b_ptr = (unsigned char *)ptr;
 	while (i < total_size)
 	{

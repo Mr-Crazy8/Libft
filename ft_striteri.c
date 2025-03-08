@@ -9,8 +9,7 @@
 /*   Updated: 2024/10/27 15:59:43 by anel-men         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <assert.h>
+
 #include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
